@@ -1,0 +1,15 @@
+git+https://github.com/lvwerra/trl.git 
+git+https://github.com/huggingface/peft.git
+datasets
+bitsandbytes
+einops
+wandb
+scipy
+fastapi[all]
+torch
+colorama
+transformers==4.30.0
+accelerate==0.20.3
+loralib==0.1.1
+openpyxl
+xformers
