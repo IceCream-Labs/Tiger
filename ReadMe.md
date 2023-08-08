@@ -1,6 +1,5 @@
 # Tiger-7b-Instruct 🐯
-**Tiger-7b-instruct** is a fine-tuned instruct model specifically designed for tasks like product attribute extraction, product detail summarization, and product description & title generation. 
-It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
+**Tiger-7b-instruct** is a fine-tuned instruct model specifically designed for tasks like product attribute extraction, product detail summarization, and product description & title generation. You can download the weights from HuggingFace by clicking [here](https://huggingface.co/icecreamlabs/Tiger-7B-Instruct). It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
 
 # Model Details ℹ️
 - Tiger is built by fine-tuning the falcon-7b-instruct model using QLoRA and supervised fine-tuning. The context limit is 2K, which is the same as the base model.
