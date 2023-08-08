@@ -19,6 +19,7 @@ It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
     - Truthfulness: 95%
   - To verify the original performance of falcon-7b is not faded away by fine-tuning we tested our model on Open LLM Leaderboard datasets and got the same level of accuracy i.e. 47%.
   - We compare our model to other open-sourced LLMs and we found out, Tiger competitively scored higher than other models. The following table shows results of open-sourced LLMs on our custom test set:
+    
   | Model            | Reasoning | Data Retrieval | Understanding | Truthfulness | Overall|
   |------------------|-----------|----------------|---------------|--------------|--------|
   |Baize-v1-7b       |80%        |0%              | 0%            | 0%           | 20%    |
