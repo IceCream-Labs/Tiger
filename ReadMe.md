@@ -1,6 +1,5 @@
 # Tiger-7b-Instruct 🐯
-**Tiger-7b-instruct** is a fine-tuned instruct model specifically designed for tasks like product attribute extraction, product detail summarization, and product description & title generation. 
-It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
+**Tiger-7b-instruct** is a fine-tuned instruct model specifically designed for tasks like product attribute extraction, product detail summarization, and product description & title generation. You can download the weights from HuggingFace by clicking [here](https://huggingface.co/icecreamlabs/Tiger-7B-Instruct). It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
 
 # Model Details ℹ️
 - Tiger is built by fine-tuning the falcon-7b-instruct model using QLoRA and supervised fine-tuning. The context limit is 2K, which is the same as the base model.
@@ -19,6 +18,7 @@ It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
     - Truthfulness: 95%
   - To verify the original performance of falcon-7b is not faded away by fine-tuning we tested our model on Open LLM Leaderboard datasets and got the same level of accuracy i.e. 47%.
   - We compare our model to other open-sourced LLMs and we found out, Tiger competitively scored higher than other models. The following table shows results of open-sourced LLMs on our custom test set:
+    
   | Model            | Reasoning | Data Retrieval | Understanding | Truthfulness | Overall|
   |------------------|-----------|----------------|---------------|--------------|--------|
   |Baize-v1-7b       |80%        |0%              | 0%            | 0%           | 20%    |
@@ -34,62 +34,6 @@ It was created by **[Icecream Labs](https://www.icecreamlabs.com)** team.
   - Product detail summarization
   - Generation of long and short descriptions from a given context
   - Generation of catchy titles for products
-
-# Model Developers 
-Icecream Labs
-
-# Model Input
-Text
-
-# Model Output
-Text
-
-# Library Used
-- The following libraries are the major packages used for training the model:
-  - Pytorch
-  - Transformers
-  - Accelerate
-  - Peft
-  - Weights & Biases
-- We have used the latest version of each package.
-
-# Training Details
-
-- Pretrained the model with SFT on the following datasets:
-  - [Databricks-Dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k/viewer/databricks--databricks-dolly-15k/train?row=25)
-  - [OpenAssitant Dataset](https://huggingface.co/datasets/OpenAssistant/oasst1)
-  - [Baize Datasets](https://github.com/project-baize/baize-chatbot/tree/main/data)
-- The pretraining was done using the following parameters:
-  - Lora R: 16
-  - Lora Alpha: 32
-  - per device train batch_size: 4
-  - gradient accumulation steps: 4
-  - optimizer: "paged_adamw_8bit"
-  - logging steps: 1
-  - learning rate: 2e-5
-  - fp16: True
-  - max steps: 3000
-  - warmup ratio: 0.05
-  - group by length: True
-  - lr scheduler type: "cosine"
-- Fine-tuning was done on our custom product dataset which was composed of 15k records containing product descriptions with their attributes. The prompts were tuned with system prompts to carry out the distillation of generation.
-- The fine-tuning was done using the following parameters:
-  - Lora R: 16
-  - Lora Alpha: 16
-  - per device train batch_size: 4
-  - gradient accumulation steps: 4
-  - optimizer: "paged_adamw_8bit"
-  - save steps: 100
-  - logging steps: 1
-  - learning rate: 2e-6
-  - fp16: True
-  - max steps: 500
-  - warmup ratio: 0.05
-  - group by length: True
-  - lr scheduler type: "linear"
-
-# License
-Apache 2.0
 
 # Contact
 For any questions or comments, [email](https://www.icecreamlabs.com/contact-us)
