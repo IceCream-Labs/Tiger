@@ -8,8 +8,9 @@ scipy
 fastapi[all]
 torch
 colorama
-transformers==4.30.0
+transformers==4.52.0
 accelerate==0.20.3
 loralib==0.1.1
 openpyxl
 xformers
+aiohttp>=3.12.14 # not directly required, pinned by Snyk to avoid a vulnerability
